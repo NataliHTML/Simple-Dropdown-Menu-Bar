@@ -3,5 +3,78 @@
 @import "reset";
 @import "libs";
 @import "global";
-
+body {
+	background: #dedede;
+	font-family: arial;
+	margin: 0;
+	padding: 0;
+}
+.dropdwn {
+	margin: 0 auto;
+}
+nav {
+	height: 60px;
+	background: #2c3e50;
+	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+	ul {
+		padding: 0;
+		margin: 0;
+		float: right;
+		margin-right: 30px;
+		li {
+			background: #2c3e50;
+			position: relative;
+			list-style: none;
+			display: inline-block;
+			a {
+				display: block;
+				padding: 0 15px;
+				color: white;
+				text-decoration: none;
+				line-height: 60px;
+				font-size: 20px;
+				&:hover {
+					background: #243342;
+				}
+			}
+		}
+		ul {
+			position: absolute;
+			top: 60px;
+			display: none;
+			li {
+				width: 150px;
+				font: none;
+				display: list-item;
+				position: relative;
+			}
+			ul {
+				li {
+					position: relative;
+					top: -60px;
+					left: 150px;
+				}
+			}
+		}
+		li:hover > ul {
+			display: block;
+		}
+	}
+}
+.logo {
+	padding: 5px 0 0 80px;
+	width: 150px;
+	height: auto;
+}
+.body {
+	padding: 0 20px;
+	img {
+		width: 100%;
+		max-width: 700px;
+		margin: 20px 0;
+		p {
+			text-align: justify;
+		}
+	}
+}
 @import "media";
